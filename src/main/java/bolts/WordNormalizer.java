@@ -16,7 +16,9 @@ public class WordNormalizer extends BaseBasicBolt {
 	 * words file and process it to Normalize this line
 	 * 
 	 * The normalize will be put the words in lower case
-	 * and split the line to get all words in this 
+	 * and split the line to get all words in this
+	 *
+	 * 负责得到并标准化每行文本。它把文本行切分成单词，大写转化成小写，去掉头尾空白符。
 	 */
 	public void execute(Tuple input, BasicOutputCollector collector) {
         String sentence = input.getString(0);
@@ -32,7 +34,8 @@ public class WordNormalizer extends BaseBasicBolt {
 	
 
 	/**
-	 * The bolt will only emit the field "word" 
+	 * The bolt will only emit the field "word"
+	 * 将发布一个名为“word”的域
 	 */
 	public void declareOutputFields(OutputFieldsDeclarer declarer) {
 		declarer.declare(new Fields("word"));
