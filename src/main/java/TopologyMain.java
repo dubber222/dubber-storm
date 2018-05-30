@@ -44,8 +44,5 @@ public class TopologyMain {
         cluster.submitTopology("Getting-Started-Toplogie", conf, builder.createTopology());
         Thread.sleep(1000);
         cluster.shutdown();
-
-
-        System.out.println("≤‚ ‘commitªÿÕÀ");
     }
 }
