@@ -46,5 +46,6 @@ public class TopologyMain {
         cluster.shutdown();
 
 
+        System.out.println("²âÊÔcommit»ØÍË");
     }
 }
